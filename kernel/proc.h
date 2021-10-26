@@ -1,3 +1,4 @@
+uint64 get_process_number();
 // Saved registers for kernel context switches.
 struct context {
   uint64 ra;
@@ -103,4 +104,5 @@ struct proc {
   struct file *ofile[NOFILE];  // Open files
   struct inode *cwd;           // Current directory
   char name[16];               // Process name (debugging)
+  int mask; // mask
 };
